@@ -1,12 +1,14 @@
 {
   "name": "plugin-directory",
   "packageManager": "yarn@4.6.0",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This repository acts as a directory for Conductor plugins officially supported by Source Academy.",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && yarn make-json",
+    "start": "rollup -cw --watch.onEnd='yarn make-json' & http-server ./dist -p8126 -c-1 --cors &",
+    "make-json": "node ./scripts/make-json.js > dist/directory.json",
     "prepack": "yarn build"
   },
   "repository": {
@@ -23,9 +25,9 @@
   },
   "homepage": "https://github.com/source-academy/plugin-directory#readme",
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.2",
+    "http-server": "^14.1.1",
     "rollup": "^4.34.1",
     "tslib": "^2.8.1",
     "typescript": "^5.5.3"

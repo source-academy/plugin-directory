@@ -1,10 +1,9 @@
-import nodeResolve from "@rollup/plugin-node-resolve";
 import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
 
-export default [{
-    plugins: [nodeResolve(), typescript()],
-    input: "src/index.ts",
+export default {
+    plugins: [typescript()],
+    input: ["src/index.ts", "src/plugins.ts", "src/util.ts"],
     output: {
         plugins: [terser({
             module: true,
@@ -17,4 +16,4 @@ export default [{
         format: "es",
         sourcemap: true,
     }
-}];
+};
