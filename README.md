@@ -26,6 +26,15 @@ bundle only the utility functions by importing from `'plugin-directory/dist/util
 
 You can reconstruct the `pluginMap` using the `generatePluginMap` utility function.
 
+### A hybrid approach
+
+You may import the `plugins` array from the dynamically updated file at
+[`https://source-academy.github.io/plugin-directory/index.js`](https://source-academy.github.io/plugin-directory/index.js).
+
+Marking this file as an external dependency in your build tool will cause it to
+be imported at run time. You may also wish to map this file to a local copy
+for development builds.
+
 ## Plugin definitions
 
 Plugin definitions should follow the `IPluginDefinition` interface.
@@ -48,4 +57,4 @@ You may test any changes (e.g. adding your new language) locally by running `yar
 This starts a development server and compiles the directory in watch mode (recompiling on any changes).
 
 The directory will be available at [`http://localhost:8126/directory.json`](http://localhost:8126/directory.json).
-On the Source Academy frontend, set the feature flag `plugindir.url` to point to this location.
+On the Source Academy frontend, set the feature flag `directory.plugin.url` to point to this location.
