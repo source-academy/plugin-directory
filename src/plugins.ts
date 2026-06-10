@@ -1,7 +1,9 @@
-import { IPluginDefinition } from "./types";
+import { stepperPlugin } from "./plugins/stepper";
+import type { IPluginDefinition } from "./types";
 import { generatePluginMap } from "./util";
 
 export const plugins: IPluginDefinition[] = [
+    stepperPlugin,
 ];
 
 export const pluginMap: Map<string, IPluginDefinition> = /*#__PURE__*/ generatePluginMap(plugins);
