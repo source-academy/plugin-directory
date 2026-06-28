@@ -1,4 +1,4 @@
-import { IPluginDefinition } from "./types";
+import type { IPluginDefinition } from "./types";
 
 export function generatePluginMap(plugins: IPluginDefinition[]): Map<string, IPluginDefinition> {
     return new Map(plugins.map(plugin => [plugin.id, plugin]));
