@@ -1,9 +1,11 @@
+import { dataVisualizerPlugin } from "./plugins/dataVisualizer";
 import { stepperPlugin } from "./plugins/stepper";
 import type { IPluginDefinition } from "./types";
 import { generatePluginMap } from "./util";
 
 export const plugins: IPluginDefinition[] = [
     stepperPlugin,
+    dataVisualizerPlugin,
 ];
 
 export const pluginMap: Map<string, IPluginDefinition> = /*#__PURE__*/ generatePluginMap(plugins);
