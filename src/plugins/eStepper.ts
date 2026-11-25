@@ -13,6 +13,13 @@ export const eStepperPlugin: IPluginDefinition = {
     name: "E-Stepper",
     description:
         "Visualises the step-by-step evaluation of a program in the environment model: the program with its environment frames and heap.",
+    tab: {
+        id: "e-stepper",
+        label: "E-Stepper",
+        iconName: "flow-review",
+        hidesRepl: true,
+        resizable: false,
+    },
     resolutions: {
         [PluginType.WEB]: "https://source-academy.github.io/plugins/web/e-stepper/index.mjs",
     },
