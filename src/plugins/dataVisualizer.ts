@@ -12,6 +12,11 @@ export const dataVisualizerPlugin: IPluginDefinition = {
     id: "data-visualizer",
     name: "Data Visualizer",
     description: "Visualises pairs, lists and trees drawn with draw_data as box-and-pointer diagrams.",
+    tab: {
+        id: "data-visualizer",
+        label: "Data Visualizer",
+        iconName: "eye-open",
+    },
     resolutions: {
         [PluginType.WEB]: "https://source-academy.github.io/plugins/web/data-visualizer/index.mjs",
     },

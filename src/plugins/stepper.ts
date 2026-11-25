@@ -12,6 +12,13 @@ export const stepperPlugin: IPluginDefinition = {
     id: "stepper",
     name: "Stepper",
     description: "Visualises the step-by-step substitution evaluation of a program.",
+    tab: {
+        id: "stepper",
+        label: "Stepper",
+        iconName: "flow-review",
+        hidesRepl: true,
+        resizable: false,
+    },
     resolutions: {
         [PluginType.WEB]: "https://source-academy.github.io/plugins/web/stepper/index.mjs",
     },

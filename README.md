@@ -39,8 +39,14 @@ for development builds.
 
 Plugin definitions should follow the `IPluginDefinition` interface.
 
-Plugins consist of an ID, a name, an optional description, and a record mapping
-execution environment to a URL to the plugin's entrypoint file.
+Plugins consist of an ID, a name, an optional description, an optional `tab`, and a record
+mapping execution environment to a URL to the plugin's entrypoint file.
+
+A plugin that contributes a side-content tab says so in `tab` (its id, label and icon, and whether
+it hides the host's REPL or keeps the side content from being resized), so that a host can show a
+placeholder for the tab, and know how it behaves, before the plugin is loaded. What the plugin
+registers when it loads (`ITabService.registerTab` of `@sourceacademy/common-tabs`) should agree
+with it.
 
 To add a new plugin to the plugins directory, define your plugin according to
 the interface, and add the definition to the `plugins` array in `src/plugins.ts`.
