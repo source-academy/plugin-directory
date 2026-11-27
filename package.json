@@ -16,7 +16,7 @@
     "url": "git+https://github.com/source-academy/plugin-directory.git"
   },
   "author": "tsammeow",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "files": [
     "dist"
   ],
