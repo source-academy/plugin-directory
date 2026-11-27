@@ -1,3 +1,4 @@
+import { cseMachinePlugin } from "./plugins/cseMachine";
 import { dataVisualizerPlugin } from "./plugins/dataVisualizer";
 import { eStepperPlugin } from "./plugins/eStepper";
 import { stepperPlugin } from "./plugins/stepper";
@@ -8,6 +9,7 @@ export const plugins: IPluginDefinition[] = [
     stepperPlugin,
     dataVisualizerPlugin,
     eStepperPlugin,
+    cseMachinePlugin,
 ];
 
 export const pluginMap: Map<string, IPluginDefinition> = /*#__PURE__*/ generatePluginMap(plugins);
