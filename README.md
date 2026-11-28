@@ -59,7 +59,7 @@ For plugins meant to use the Source Academy Frontend's API, create an entry for
 
 ## Local testing
 
-Building needs Node 24 (the version in `.node-version`; see the [Node.js version](https://github.com/source-academy/documentation/blob/main/app/docs/developers/node-version.md) page).
+Building needs Node 24 (the version in `.node-version`; see the [Node.js version](https://docs.sourceacademy.org/developer/node-version) page).
 
 You may test any changes (e.g. adding your new language) locally by running `yarn start`.
 This starts a development server and compiles the directory in watch mode (recompiling on any changes).
